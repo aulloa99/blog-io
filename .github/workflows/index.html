@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog de Conocimiento IO</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff0f6;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #f48fb1, #ec407a);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #f8bbd0;
+      padding: 0.8rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      margin: 0 1.2rem;
+      text-decoration: none;
+      color: #880e4f;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      color: #ad1457;
+      border-bottom: 2px solid #ad1457;
+      padding-bottom: 0.2rem;
+    }
+    main {
+      padding: 2rem 1rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    section {
+      background-color: #ffe4ec;
+      padding: 1.8rem;
+      border-radius: 16px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    section:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+    }
+    section h2 {
+      color: #ad1457;
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+    .temas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .tema-card {
+      background-color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+    .tema-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    .tema-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .tema-card h3 {
+      margin: 1rem 0 0.5rem;
+      color: #ad1457;
+    }
+    .tema-card p {
+      padding: 0 1rem 1rem;
+      font-size: 0.95rem;
+    }
+    .tema-card a {
+      display: inline-block;
+      margin-bottom: 1rem;
+      background-color: #f48fb1;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .tema-card a:hover {
+      background-color: #ec407a;
+    }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f8bbd0;
+      color: #4a148c;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Blog de Conocimiento IO: Aplicaciones Prácticas</h1>
+    <p>Andreina Jannin Ulloa Téllez</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#fase1">Fase 1</a>
+    <a href="#fase2">Fase 2</a>
+    <a href="#fase3">Fase 3</a>
+    <a href="#referencias">Referencias</a>
+  </nav>
+
+  <main>
+    <section id="inicio">
+      <h2>Bienvenida</h2>
+      <p>Este blog recopila las fases del proyecto final de Investigación de Operaciones, mostrando la aplicación práctica de los modelos y métodos aprendidos. Aquí encontrarás explicaciones, ejemplos resueltos, recursos gráficos y material de apoyo en PDF para reforzar tu aprendizaje.</p>
+      <h2>Temas principales de la Fase 1</h2>
+      <div class="temas-grid">
+        <div class="tema-card">
+          <img src="https://source.unsplash.com/400x300/?math,formulas" alt="Formulación de Modelos">
+          <h3>Formulación de Modelos</h3>
+          <p>La formulación consiste en traducir un problema real a un modelo matemático con variables, restricciones y función objetivo.</p>
+          <a href="#formulacion">Ver más</a>
+        </div>
+        <div class="tema-card">
+          <img src="https://source.unsplash.com/400x300/?linear,algebra" alt="Programación Lineal">
+          <h3>Programación Lineal</h3>
+          <p>La programación lineal busca optimizar una función lineal sujeta a restricciones también lineales, dentro de una región factible.</p>
+          <a href="#programacion">Ver más</a>
+        </div>
+        <div class="tema-card">
+          <img src="https://source.unsplash.com/400x300/?graph,plot" alt="Método Gráfico">
+          <h3>Método Gráfico</h3>
+          <p>El método gráfico permite resolver problemas de dos variables mediante la representación de restricciones en un plano cartesiano.</p>
+          <a href="#grafico">Ver más</a>
+        </div>
+        <div class="tema-card">
+          <img src="https://source.unsplash.com/400x300/?numbers,table" alt="Método Simplex">
+          <h3>Método Simplex</h3>
+          <p>El método Simplex es un algoritmo iterativo usado para resolver problemas de programación lineal con más de dos variables.</p>
+          <a href="#simplex">Ver más</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="fase1">
+      <h2>Fase 1: Formulación de Modelos y Programación Lineal</h2>
+      <p>Aquí se presentará el artículo completo con los temas de Formulación de Modelos, Programación Lineal, Método Gráfico y Método Simplex. Se incluirán ejemplos detallados, imágenes y documentos PDF.</p>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Secciones adicionales -->
+    <section id="fase2">
+      <h2>Fase 2</h2>
+      <p>Espacio reservado para la segunda fase del proyecto.</p>
+    </section>
+
+    <section id="fase3">
+      <h2>Fase 3</h2>
+      <p>Espacio reservado para la tercera fase del proyecto.</p>
+    </section>
+
+    <section id="referencias">
+      <h2>Referencias</h2>
+      <ul>
+        <li>Libros, artículos y recursos en formato APA que se utilicen en el proyecto.</li>
+      </ul>
+    </section>
+
+    <!-- Contenido breve de cada tema (enlaces desde Inicio) -->
+    <section id="formulacion">
+      <h2>Formulación de Modelos</h2>
+      <p>La formulación de modelos traduce problemas reales a expresiones matemáticas. Un modelo incluye variables de decisión, una función objetivo y restricciones. Aquí podrás incluir ejemplos prácticos en PDF o imágenes.</p>
+    </section>
+
+    <section id="programacion">
+      <h2>Programación Lineal</h2>
+      <p>La programación lineal optimiza recursos limitados. Se aplican técnicas matemáticas para encontrar el valor máximo o mínimo de una función objetivo. Aquí se añadirán ejemplos y archivos PDF.</p>
+    </section>
+
+    <section id="grafico">
+      <h2>Método Gráfico</h2>
+      <p>El método gráfico representa restricciones en un plano cartesiano, permitiendo visualizar la región factible y encontrar la solución óptima en vértices. Aquí podrás adjuntar tus propias gráficas.</p>
+    </section>
+
+    <section id="simplex">
+      <h2>Método Simplex</h2>
+      <p>El método Simplex resuelve problemas de programación lineal de más de dos variables mediante iteraciones en tablas. Aquí se mostrarán pasos e imágenes de ejemplos prácticos.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Blog de Conocimiento IO | Andreina Jannin Ulloa Téllez</p>
+  </footer>
+</body>
+</html>
